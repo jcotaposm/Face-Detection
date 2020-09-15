@@ -64,13 +64,15 @@ def main():
     activities = ["Home", "About"]
     choice = st.sidebar.selectbox("Pick something fun", activities)
 
+    st.set_option('deprecation.showfileUploaderEncoding', False)###
+
     if choice == "Home":
 
     	st.write("Vaya a la sección About de en la barra lateral para obtener más información al respecto.")
         
         # Puede especificar más tipos de archivos a continuación si lo desea
     	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
-        st.set_option('deprecation.showfileUploaderEncoding', False)
+        
     	if image_file is not None:
 
     		image = Image.open(image_file)
