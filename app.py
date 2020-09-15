@@ -70,7 +70,7 @@ def main():
         
         # Puede especificar más tipos de archivos a continuación si lo desea
     	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
-
+        st.set_option('deprecation.showfileUploaderEncoding', False)
     	if image_file is not None:
 
     		image = Image.open(image_file)
