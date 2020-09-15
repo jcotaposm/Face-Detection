@@ -4,7 +4,7 @@ import cv2
 from PIL import Image
 import numpy as np
 import os
-
+import io
 
 # cargando modelos pre-entrenados
 try:
@@ -66,11 +66,12 @@ def main():
 
     if choice == "Home":
 
-    	#st.write("Go to the About section from the sidebar to learn more about it.")
+    	st.write("Vaya a la sección About de en la barra lateral para obtener más información al respecto.")
         
         # Puede especificar más tipos de archivos a continuación si lo desea
-    	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
-
+    	
+        image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
+        text_io = io.TextIOWrapper(image_file)
     	if image_file is not None:
 
     		image = Image.open(image_file)
@@ -81,7 +82,7 @@ def main():
                 # result_faces es la matriz con coordenadas de cuadro delimitador
     			result_img, result_faces = detect(image=image)
     			st.image(result_img, use_column_width = True)
-    			st.success("Found {} faces\n".format(len(result_faces)))
+    			st.success("Se ha encontrado {} cara\n".format(len(result_faces)))
 
     elif choice == "About":
     	about()
