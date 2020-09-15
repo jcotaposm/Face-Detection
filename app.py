@@ -66,16 +66,16 @@ def main():
 
     if choice == "Home":
 
-    	st.write("Go to the About section from the sidebar to learn more about it.")
+    	#st.write("Go to the About section from the sidebar to learn more about it.")
         
         # Puede especificar más tipos de archivos a continuación si lo desea
-    	image_file = st.file_uploader("Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
+    	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
 
     	if image_file is not None:
 
     		image = Image.open(image_file)
 
-    		if st.button("Process"):
+    		if st.button("Ejecutar"):
                 
                 # result_img es la imagen con un rectángulo dibujado en ella (en caso de que se detecten caras)
                 # result_faces es la matriz con coordenadas de cuadro delimitador
