@@ -69,11 +69,10 @@ def main():
     	st.write("Vaya a la sección About de en la barra lateral para obtener más información al respecto.")
         
         # Puede especificar más tipos de archivos a continuación si lo desea
-    	
-        image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
+    	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
 
     	if image_file is not None:
-            
+
     		image = Image.open(image_file)
 
     		if st.button("Ejecutar"):
@@ -82,7 +81,7 @@ def main():
                 # result_faces es la matriz con coordenadas de cuadro delimitador
     			result_img, result_faces = detect(image=image)
     			st.image(result_img, use_column_width = True)
-    			st.success("Se ha encontrado {} cara\n".format(len(result_faces)))
+    			st.success("Se ha encontrado {} caras\n".format(len(result_faces)))
 
     elif choice == "About":
     	about()
