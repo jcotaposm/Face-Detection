@@ -73,7 +73,7 @@ def main():
         image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
 
     	if image_file is not None:
-
+            
     		image = Image.open(image_file)
 
     		if st.button("Ejecutar"):
