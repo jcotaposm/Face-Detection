@@ -4,7 +4,7 @@ import cv2
 from PIL import Image
 import numpy as np
 import os
-import io
+
 
 # cargando modelos pre-entrenados
 try:
@@ -71,7 +71,7 @@ def main():
         # Puede especificar más tipos de archivos a continuación si lo desea
     	
         image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
-        text_io = io.TextIOWrapper(image_file)
+
     	if image_file is not None:
 
     		image = Image.open(image_file)
