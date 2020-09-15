@@ -71,20 +71,8 @@ def detect(image):
 def about():
 	st.write(
 		'''
-		**Haar Cascade** is an object detection algorithm.
-		It can be used to detect objects in images or videos. 
-
-		The algorithm has four stages:
-
-			1. Haar Feature Selection 
-			2. Creating  Integral Images
-			3. Adaboost Training
-			4. Cascading Classifiers
-
-
-
-Read more :point_right: https://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html
-https://sites.google.com/site/5kk73gpu2012/assignment/viola-jones-face-detection#TOC-Image-Pyramid
+		**Deteccion* de rostros fue pensado para implementar en sitios importante.
+		El objetivo final es identificar quienes hacen ingreso a estas instalaciones. 
 		''')
 
 
