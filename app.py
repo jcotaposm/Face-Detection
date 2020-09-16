@@ -71,7 +71,7 @@ def main():
     	st.write("Vaya a la sección About de en la barra lateral para obtener más información al respecto.")
         
         # Puede especificar más tipos de archivos a continuación si lo desea
-    	image_file = st.file_uploader("Sube tu imagen aqui", type=['jpeg', 'png', 'jpg', 'webp'])
+    	image_file = st.file_uploader("Sube una imagen con rostros", type=['jpeg', 'png', 'jpg', 'webp'])
         
     	if image_file is not None:
 
