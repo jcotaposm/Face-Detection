@@ -62,7 +62,7 @@ def main():
     st.write("**Usando Haar cascade Classifiers**")
 
     activities = ["Home", "About"]
-    choice = st.sidebar.selectbox("Pick something fun", activities)
+    choice = st.sidebar.selectbox("Opciones", activities)
 
     st.set_option('deprecation.showfileUploaderEncoding', False)###
 
